@@ -1,0 +1,24 @@
+{
+  "name": "@aspianet/faraz-sms",
+  "version": "1.0.0",
+  "description": "Unofficial SDK for Faraz SMS REST API to work with NodeJS and TypeScript or JavaScript",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc"
+  },
+  "keywords": [],
+  "author": "Omid Rouhani",
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^4.0.1",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
