@@ -11,7 +11,12 @@
     "clean": "del ./build/*",
     "build": "npm run clean && tsc"
   },
-  "keywords": [],
+  "keywords": [
+    "FarazSMS",
+    "Faraz-SMS-SDK",
+    "faraz-sms",
+    "sms-web-service"
+  ],
   "author": "Omid Rouhani <o.rohani@gmail.com> (https://github.com/aspian-io)",
   "license": "MIT",
   "homepage": "https://github.com/aspian-io/faraz-sms-sdk#readme",
