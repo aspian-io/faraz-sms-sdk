@@ -24,6 +24,10 @@
     "type": "git",
     "url": "git@github.com:aspian-io/faraz-sms-sdk.git"
   },
+  "bugs": {
+    "url": "https://github.com/aspian-io/faraz-sms-sdk/issues",
+    "email": "o.rohani@gmail.com"
+  },
   "devDependencies": {
     "del-cli": "^4.0.1",
     "typescript": "^4.5.5"
