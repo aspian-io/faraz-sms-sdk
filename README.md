@@ -1,8 +1,12 @@
-![npm](https://img.shields.io/npm/v/@aspianet/faraz-sms)
-![npm](https://img.shields.io/npm/dw/@aspianet/faraz-sms)
-![GitHub issues](https://img.shields.io/github/issues-raw/aspian-io/faraz-sms-sdk)
-![NPM](https://img.shields.io/npm/l/@aspianet/faraz-sms)
-![npm type definitions](https://img.shields.io/npm/types/@aspianet/faraz-sms)
+<div align="center">
+  <img src="https://img.shields.io/npm/v/@aspianet/faraz-sms">
+  <img src="https://img.shields.io/npm/dw/@aspianet/faraz-sms">
+  <img src="https://img.shields.io/github/issues-raw/aspian-io/faraz-sms-sdk">
+  <img src="https://img.shields.io/npm/l/@aspianet/faraz-sms">
+  <img src="https://img.shields.io/npm/types/@aspianet/faraz-sms">
+</div>
+
+<br>
 
 <div align="center">
   <img align="center" src="https://user-images.githubusercontent.com/5561368/153906136-a4763186-ac81-4764-ad3e-262220b47480.png">
