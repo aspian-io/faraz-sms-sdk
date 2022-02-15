@@ -2,10 +2,6 @@ import axios from "axios";
 import { farazSMS } from "./faraz-sms";
 
 export interface IFarazSendSMSResult {
-  value: IFarazSendSMSValue;
-}
-
-export interface IFarazSendSMSValue {
   status: string;
   code: number;
   message: string;

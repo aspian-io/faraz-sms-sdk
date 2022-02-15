@@ -2,7 +2,7 @@ import axios from "axios";
 import { farazSMS } from "./faraz-sms";
 
 export interface IFarazUser {
-  id: string;
+  id: number;
   username: string;
   name: string;
   email: string;

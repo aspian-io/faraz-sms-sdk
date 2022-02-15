@@ -15,7 +15,14 @@ export interface IFarazGetMsgRecipientsStatusData {
 
 export interface IFarazGetMsgRecipient {
   recipient: string;
-  status: string;
+  status: FarazGetMsgRecipientsStatusEnum;
+}
+
+export enum FarazGetMsgRecipientsStatusEnum {
+  send = "send",
+  discarded = "discarded",
+  pending = "pending",
+  failed = "failed"
 }
 
 export interface IFarazGetMsgRecipientsStatusMeta {

@@ -2,10 +2,6 @@ import axios from "axios";
 import { farazSMS } from "./faraz-sms";
 
 export interface IFarazCreatePatternResult {
-  value: IFarazCreatePatternValue;
-}
-
-export interface IFarazCreatePatternValue {
   status: string;
   code: number;
   message: string;
