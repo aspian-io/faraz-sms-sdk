@@ -27,9 +27,7 @@ export async function farazSendPattern (
   pattern_code: string,
   originator: string,
   recipient: string,
-  values: {
-    name: string;
-  }
+  values: {}
 ): Promise<IFarazSendPatternResult> {
   try {
     const { data } = await axios.post<IFarazSendPatternResult>( "http://rest.ippanel.com/v1/messages/patterns/send", {
