@@ -1,6 +1,6 @@
 {
   "name": "@aspianet/faraz-sms",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Unofficial SDK for Faraz SMS REST API to work with NodeJS and TypeScript or JavaScript",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
