@@ -55,7 +55,7 @@ npm install @aspianet/faraz-sms
 ```ts
 import { farazSMS } from '@aspianet/faraz-sms';
 
-farazSMS.init( "YOUR_API_KEY" );
+farazSMS.init( "کلید-API" );
 ```
 
   </div>
@@ -66,7 +66,7 @@ farazSMS.init( "YOUR_API_KEY" );
 ```ts
 import { farazSendSMS } from '@aspianet/faraz-sms';
 
-await farazSendSMS( 'sender_number', [ 'recipient_number' ], `Text message to send` );
+await farazSendSMS( 'متن پیام جهت ارسال', [ 'شماره-گیرنده' ], `شماره-ارسال-کننده` );
 ```
 
   </div>
@@ -84,10 +84,10 @@ await farazSendSMS( 'sender_number', [ 'recipient_number' ], `Text message to se
 **نمونه پترن یا الگوی پیامک:**
 <div dir="ltr">
   
-```
-const samplePattern = `Welcome to our website dear %name%.
+```ts
+const samplePattern = `مشترک گرامی %name% عزیز به پنل کاربری خود خوش آمدید.
                        www.example-company.com
-                       Company name`;
+                       نام شرکت`;
 ```
 
   </div>
@@ -97,10 +97,14 @@ const samplePattern = `Welcome to our website dear %name%.
   
 ```ts
 import { farazCreatePattern } from "@aspianet/faraz-sms";
+  
+const samplePattern = `مشترک گرامی %name% عزیز به پنل کاربری خود خوش آمدید.
+                       www.example-company.com
+                       نام شرکت`;
 
-const result = await farazCreatePattern( samplePattern, "DESCRIPTION", false );
+const result = await farazCreatePattern( samplePattern, "توضیحات", false );
 const patternCode = result.data.pattern.code;
-console.log( "Created pattern code is: ", patternCode );
+console.log( "کد الگوی ساخته شده: ", patternCode );
 ```
 
   </div>
@@ -112,7 +116,8 @@ console.log( "Created pattern code is: ", patternCode );
 ```ts
 import { farazSendPattern } from "@aspianet/faraz-sms";
 
-await farazSendPattern( patternCode, "originator", "recipient", { name: "John" } );
+// patternCode = متغیر دربرگیرنده کد الگوی تولید و تایید شده
+await farazSendPattern( patternCode, "شماره-گیرنده", "شماره-ارسال-کننده", { name: "امید" } );
 ```
 
   </div>
@@ -169,7 +174,7 @@ await farazSendSMS( 'sender_number', [ 'recipient_number' ], `Text message to se
 You can also send your messages by using an approved pattern to send it much faster (less than 5 seconds). For doing so, firstly, you need to add a pattern for your message through Faraz SMS admin panel by clicking on (ارسال بر اساس پترن) option from main menu and wait for the sent pattern to be approved. Or, alternatively, you can use **farazCreatePattern** function to create an SMS pattern like this:
 
 **pattern sample:**
-```
+```ts
 const samplePattern = `Welcome to our website dear %name%.
                        www.example-company.com
                        Company name`;
@@ -187,6 +192,10 @@ then, you can use **pattern's code** to send your messages quickly by using it a
 
 ```ts
 import { farazSendPattern } from "@aspianet/faraz-sms";
+
+const samplePattern = `Welcome to our website dear %name%.
+                       www.example-company.com
+                       Company name`;
 
 await farazSendPattern( patternCode, "originator", "recipient", { name: "John" } );
 ```
