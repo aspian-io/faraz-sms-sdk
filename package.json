@@ -1,7 +1,7 @@
 {
   "name": "@aspianet/faraz-sms",
   "version": "1.0.10",
-  "description": "Unofficial SDK for Faraz SMS REST API to work with NodeJS and TypeScript or JavaScript",
+  "description": "بسته غیر رسمی توسعه نرم افزاری فراز اس‌ام‌اس برای استفاده در محیط پلتفرم NodeJS به همراه JavaScript یا TypeScript ایجاد شده است.",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
