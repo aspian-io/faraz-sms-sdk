@@ -11,8 +11,8 @@
 <div align="center">
   <img align="center" src="https://user-images.githubusercontent.com/5561368/153906136-a4763186-ac81-4764-ad3e-262220b47480.png">
   <br/>
-  <p align="center">Created by ASPIANET - Omid Rouhani</p>
-  <p align="center">تولید شده توسط آسپیانت - امید روحانی</p>
+  <div align="center">Created by ASPIANET - Omid Rouhani</div>
+  <div align="center">تولید شده توسط آسپیانت - امید روحانی</div>
 </div>
 
 <br/>
@@ -76,10 +76,10 @@ await farazSendSMS( 'sender_number', [ 'recipient_number' ], `Text message to se
 جهت ایجاد الگوی ارسال پیامک ۲ راه وجود  دارد:
 
 ۱- تولید الگو از طریق مراجعه به منوی اصلی پنل کاربری فراز اس‌ام‌اس و انتخاب گزینه **ارسال بر اساس پترن** و تولید پترن و استفاده از آن توسط **کد الگو** پس از تایید.
-۲- تولید الگو توسط تابع **farazCreatePattern** و استفاده از **کد الگو** جهت ارسال پیامک با الگو، پس از تایید شدن آن در پنل کاربری. 
+
+  ۲- تولید الگو توسط تابع **farazCreatePattern** و استفاده از **کد الگو** جهت ارسال پیامک با الگو، پس از تایید شدن آن در پنل کاربری. 
 
 
-مثال استفاده از **روش دوم**:
 
 **نمونه پترن یا الگوی پیامک:**
 <div dir="ltr">
