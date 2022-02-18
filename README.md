@@ -17,6 +17,8 @@
 
 <br/>
 
+<div dir="rtl">
+
 
 - [فارسی](#درباره-پنل-اساماس-فراز-اساماس)
 - [English](#about-faraz-sms)
@@ -38,22 +40,37 @@
 این بسته توسط تایپ اسکریپت با استفاده از [مستندات رسمی REST API فراز اس‌ام‌اس](http://docs.ippanel.com) برای تسهیل استفاده از امکانات این سرویس دهنده اس‌ام‌اس توسط برنامه نویسان جاوااسکریپت و تایپ اسکریپت و به دلیل عدم ارائه یک SDK مناسب برای NodeJS یا ارائه بسته ناقص یا دارای ایراد توسط اغلب سرویس دهندگان اس‌ام‌اس، تولید گردیده است.
 
 ## روش نصب
+<div dir="ltr">
+  
 ```sh
 npm install @aspianet/faraz-sms
 ```
+
+  </div>
+  
 ## کاربرد
 قبل از هر چیز شما نیازمند دریافت کلید API از پنل کاربری خود در فراز اس ام‌اس هستید تا بتوانید به واسطه آن SDK موجود را مقداردهی اولیه و راه اندازی کنید. برای مثال، شما می توانید کد زیر را در فایل اصلی اپلیکیشن اکسپرس خود (مانند app.js) ایجاد و با کلید API مقداردهی نمایید تا بتوانید در هر فایل دیگر اپلیکیشن خود بدون استفاده مکرر از این کلید از سایر امکانات SDK استفاده نمایید:
+<div dir="ltr">
+  
 ```ts
 import { farazSMS } from '@aspianet/faraz-sms';
 
 farazSMS.init( "YOUR_API_KEY" );
 ```
+
+  </div>
+  
 سپس، به سادگی می تونید اولین پیامک خود را با استفاده از کد زیر ارسال نمایید:
+<div dir="ltr">
+  
 ```ts
 import { farazSendSMS } from '@aspianet/faraz-sms';
 
 await farazSendSMS( 'sender_number', [ 'recipient_number' ], `Text message to send` );
 ```
+
+  </div>
+  
 دقت نمایید در صورتی که از خطوط اشتراکی فراز اس‌ام‌اس استفاده می کنید، ارسال پیامک، بدون الگو، به دلیل نیاز به تایید انسانی بین ۵ تا ۱۰ دقیقه زمانبر خواهد بود. به همین علت در صورت نیاز به ارسال سریع پیامک از طریق خطوط اشتراکی، می بایست از الگوهای ارسال پیامک Pattern استفاده نمود، که در این صورت، زمان ارسال پیامک به دلیل عدم نیاز به تایید نیروی انسانی به کمتر از ۵ ثانیه کاهش یافته و تسریع می گردد.
 
 جهت ایجاد الگوی ارسال پیامک ۲ راه وجود  دارد:
@@ -65,12 +82,19 @@ await farazSendSMS( 'sender_number', [ 'recipient_number' ], `Text message to se
 مثال استفاده از **روش دوم**:
 
 **نمونه پترن یا الگوی پیامک:**
+<div dir="ltr">
+  
 ```
 const samplePattern = `Welcome to our website dear %name%.
                        www.example-company.com
                        Company name`;
 ```
+
+  </div>
+  
 **نمونه ساختن پترن یا الگو توسط API:**
+<div dir="ltr">
+  
 ```ts
 import { farazCreatePattern } from "@aspianet/faraz-sms";
 
@@ -78,17 +102,27 @@ const result = await farazCreatePattern( samplePattern, "DESCRIPTION", false );
 const patternCode = result.data.pattern.code;
 console.log( "Created pattern code is: ", patternCode );
 ```
+
+  </div>
+  
 پس از تولید پترن یا الگو به یکی از طرق ممکن و تایید شدن (فعال شدن) آن در پنل کاربری، می توانید با استفاده از تابع زیر و با بهره‌گیری از کد الگو، پیامک خود را به روش سریع (زمان ارسال کمتر از ۵ ثانیه) ارسال نمایید: (توجه نمایید که استفاده از کد الگو، قبل از تایید در پنل کاربری و فعال شدن آن امکان پذیر نمی باشد)
 
+<div dir="ltr">
+  
 ```ts
 import { farazSendPattern } from "@aspianet/faraz-sms";
 
 await farazSendPattern( patternCode, "originator", "recipient", { name: "John" } );
 ```
 
+  </div>
+  
+
 ## رابط برنامه نویسی یا API
 در اینجا می توانید تمام توابع پشتیبانی شده در این SDK برای استفاده از قابلیت های کامل موجود در [مستندات رسمی REST API فراز اس‌ام‌اس](http://docs.ippanel.com) را با خلاصه عملکرد آن ها مشاهده نمایید: 
 
+<div dir="ltr">
+  
 | تابع | توضیحات |
 | -------- | ----------- |
 | farazAuth | دریافت اطلاعات کاربر احراز هویت شده |
@@ -99,9 +133,13 @@ await farazSendPattern( patternCode, "originator", "recipient", { name: "John" }
 | farazSendPattern | ارسال یک پیامک با استفاده از کد پترن ساخته و فعال شده |
 | farazGetMessageRecipientsStatus | دریافت اطلاعات وضعیت ارسال پیامک به گیرندگان |
 | farazFetchInboxMessages | دریافت تمامی پیام های صندوق پیام |
+  
+</div>
 
 <br>
 <br>
+
+</div>
 
 
 # About Faraz SMS
