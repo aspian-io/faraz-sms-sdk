@@ -1,6 +1,6 @@
 {
   "name": "@aspianet/faraz-sms",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "بسته غیر رسمی توسعه نرم افزاری فراز اس‌ام‌اس برای استفاده در محیط پلتفرم NodeJS به همراه JavaScript یا TypeScript ایجاد شده است.",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
