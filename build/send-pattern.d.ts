@@ -14,7 +14,7 @@ export interface IFarazSendPatternData {
  * @param {string} pattern_code - Pattern code
  * @param {string} originator - Your line number to send message from that
  * @param {string} recipient - Recipient number
- * @param {T} values - Pattern values is and object of generic type T
+ * @param {T} values - Pattern values is an object of generic type T
  * @returns {Promise<IFarazSendPatternResult>} - A Promise of type IFarazSendPatternResult
  * @link Also checkout http://docs.ippanel.com/#operation/SendPattern
  */
