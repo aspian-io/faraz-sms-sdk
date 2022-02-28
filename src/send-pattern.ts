@@ -19,15 +19,15 @@ export interface IFarazSendPatternData {
  * @param {string} pattern_code - Pattern code
  * @param {string} originator - Your line number to send message from that
  * @param {string} recipient - Recipient number
- * @param {Object} values - Pattern values
+ * @param {T} values - Pattern values is and object of generic type T
  * @returns {Promise<IFarazSendPatternResult>} - A Promise of type IFarazSendPatternResult
  * @link Also checkout http://docs.ippanel.com/#operation/SendPattern
  */
-export async function farazSendPattern (
+export async function farazSendPattern<T> (
   pattern_code: string,
   originator: string,
   recipient: string,
-  values: {}
+  values: T
 ): Promise<IFarazSendPatternResult> {
   try {
     const { data } = await axios.post<IFarazSendPatternResult>( "http://rest.ippanel.com/v1/messages/patterns/send", {
